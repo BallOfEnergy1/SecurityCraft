@@ -14,7 +14,7 @@ public class TileEntityLogger extends TileEntityOwnable {
 	@Override
 	public boolean attackEntity(Entity entity) {
 		if (!worldObj.isRemote) {
-			if(entity extends EntityPlayer) {
+			if(entity instanceof EntityPlayer) {
 				addPlayerName(((EntityPlayer) entity).getCommandSenderName());
 				sendChangeToClient(false);
 			}
